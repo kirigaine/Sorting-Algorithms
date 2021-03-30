@@ -5,14 +5,19 @@ Average: O(nlogn)
 Worst: O(n^2)
 Space: 0(logn)
 Pros:
-    +
+    + Low overhead
+    + Efficient
 Cons:
-    -
+    - Moderately complex logically
+    - Worst case time complexity happens with sorted data
+    - Random pivots can result in occasional longer time complexity
+    - Unstable
 """
 from random import randint
 
 def main():
 
+    # Create 3 data sets and test sorting algorithm
     A = [4,3,2,4,6,2]
     print("A Unsorted: ",end='')
     myprint(A)

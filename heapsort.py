@@ -5,14 +5,17 @@ Average: O(nlogn)
 Worst: O(nlogn)
 Space: 0(1)
 Pros:
-    + Heapsort is fast
+    + Heapsort is fast and consistent
     + Doesn't require extra memory in place
+    + Efficient
 Cons:
-    -
+    - Requires understanding binary tree
+    - Unstable
 """
 import math
 def main():
 
+    # Create 3 data sets and test sorting algorithm
     A = [4,3,2,4,6,2]
     print("A Unsorted: ",end='')
     myprint(A)

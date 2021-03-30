@@ -5,12 +5,18 @@ Average: O(n^2)
 Worst: O(n^2)
 Space: 0(1)
 Pros:
-    +
+    + Fast on small data sets
+    + Simple complexity
+    + Low space complexity
+    + Stable
 Cons:
-    -
+    - Doesn't scale well
+    - Excessive unsorted data magnifies time taken
 """
 
 def main():
+
+    # Create 4 data sets and test sorting algorithm
     A = [4,3,2,4,6,2]
     print("A Unsorted: ",end='')
     myprint(A)
@@ -50,7 +56,7 @@ def bubbleSort(A):
         has_swapped = False
         for j in range(0, size-i-1):
             if A[j] > A[j+1]:
-                # If index to left of right index, swap them and flag boolean
+                # If index to left of right index is LARGER, swap them and flag boolean
                 temp = A[j]
                 A[j] = A[j+1]
                 A[j+1] = temp

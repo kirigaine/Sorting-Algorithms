@@ -4,9 +4,18 @@ Best: O(n)
 Average: O(n^2)
 Worst: O(n^2)
 Space: 0(1)
-Why Use: Can be a bit slower, but doesn't require extra memory. Simple.
+Pros:
+    + Fast on small data sets
+    + Simple logic complexity
+    + Low space complexity
+    + Stable
+Cons:
+    - Doesn't scale well
+    - Excessive unsorted data magnifies time taken
 """
 def main():
+
+    # Create 3 data sets and test sorting algorithm
     print("A Unsorted: ",end='')
     A = [5,2,4,6,1,3]
     myprint(A)
@@ -29,6 +38,9 @@ def main():
     myprint(C)
 
 def insertion_sort(A):
+    # j is perspective size of portion of array we are sorting
+    # key is the value we are moving
+    # Shift key down array until it is smaller than everything above
     # for(j=1; j<A.length; j++)
     for j in range(1, len(A), 1):
         key = A[j]
